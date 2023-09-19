@@ -10,9 +10,9 @@ from selenium.webdriver.common .by import By
 def setup(request):
     with open('setting.json', 'r') as setting:
         setting = json.loads(setting.read())
-    if setting['browser'] == "chrome":
+    if setting["browser"] == "chrome":
         driver = webdriver.Chrome()
-    elif setting['browser'] == "firefox":
+    elif setting["browser"] == "firefox":
         driver = webdriver.Firefox()
     else:
         print("некорректно указан браузер в настройках")
